@@ -1,0 +1,161 @@
+
+  .camera-error {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: #fff5f5;
+    border-radius: 8px;
+    text-align: center;
+  }
+  
+  .camera-header {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .camera-main-content {
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+  }
+  
+  .camera-feed-container {
+    flex: 1;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .camera-feed {
+    width: 100%;
+    height: auto;
+    max-height: 480px;
+    background-color: #000;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+  
+  .capture-button {
+    margin-top: 1rem;
+    padding: 0.75rem 1.5rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .capture-button:hover {
+    background-color: #2563eb;
+  }
+  
+  .capture-button:disabled {
+    background-color: #60a5fa;
+    cursor: not-allowed;
+  }
+  
+  .countdown-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 8px;
+  }
+  
+  .countdown-number {
+    font-size: 5rem;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .preview-section {
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .preview-title {
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  .preview-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    overflow-y: auto;
+    max-height: 480px;
+  }
+  
+  .preview-item {
+    position: relative;
+    border-radius: 4px;
+    overflow: hidden;
+    aspect-ratio: 3/4;
+  }
+  
+  .preview-item.current {
+    border: 2px solid #3b82f6;
+  }
+  
+  .preview-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .empty-preview {
+    width: 100%;
+    height: 100%;
+    background-color: #f3f4f6;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #6b7280;
+  }
+  
+  .preview-label {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    padding: 4px;
+    font-size: 0.75rem;
+    text-align: center;
+  }
+  
+  .retry-button {
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #3b82f6;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 768px) {
+    .camera-main-content {
+      flex-direction: column;
+    }
+    
+    .preview-section {
+      width: 100%;
+    }
+    
+    .preview-grid {
+      max-height: 300px;
+    }
+  }
